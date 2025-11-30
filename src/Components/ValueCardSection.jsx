@@ -1,0 +1,100 @@
+import React from "react";
+import { Layers, Shield, Hammer } from "lucide-react";
+import ScrollAnimation from "./ScrollAnimation";
+
+export default function ValuesCardsSection() {
+  const values = [
+    {
+      id: 1,
+      title: "Quality",
+      description:
+        "We are dedicated to delivering work of the highest quality, adhering to industry standards and best practices to ensure the success of every project.",
+      icon: Layers,
+      color: "from-blue-600 to-blue-700",
+    },
+    {
+      id: 2,
+      title: "Integrity",
+      description:
+        "Honesty and transparency are at the heart of everything we do. We build trust through open communication and ethical business practices.",
+      icon: Shield,
+      color: "from-blue-600 to-blue-700",
+    },
+    {
+      id: 3,
+      title: "Innovation",
+      description:
+        "We embrace innovation and continually seek out new technologies and methods to improve our services, ensuring that we deliver the best possible outcomes for our clients.",
+      icon: Hammer,
+      color: "from-blue-600 to-blue-700",
+    },
+  ];
+
+  return (
+    <ScrollAnimation direction="up">
+      <div className="w-full bg-[#fcf4f0a9] py-16 md:py-20 lg:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section Header */}
+          <ScrollAnimation direction="up" delay={0.1}>
+            <div>
+              <p className="mb-2 text-[#FF5E15] font-semibold">What We Stand For</p>
+              <h5 className="text-[#181D4E] font-semibold md:text-3xl uppercase tracking-wider mb-6">
+                Our Core Values
+              </h5>
+            </div>
+          </ScrollAnimation>
+
+          {/* Values Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 items-stretch">
+            {values.map((value, index) => {
+              const Icon = value.icon;
+              return (
+                <ScrollAnimation
+                  key={value.id}
+                  direction={index % 2 === 0 ? "left" : "right"}
+                  delay={0.2 + index * 0.2}
+                >
+                  <div className="group relative bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 hover:border-orange-200 h-full">
+                    {/* Card Content */}
+                    <div className="p-8 space-y-6">
+                      {/* Title with Orange Accent */}
+                      <div className="flex items-start gap-3">
+                        <div className="w-1.5 h-8 bg-orange-500 rounded-full flex-shrink-0"></div>
+                        <h3 className="text-2xl md:text-3xl font-bold text-gray-900 group-hover:text-orange-500 transition-colors duration-300">
+                          {value.title}
+                        </h3>
+                      </div>
+
+                      {/* Description */}
+                      <p className="text-gray-600 leading-relaxed text-base">
+                        {value.description}
+                      </p>
+
+                      {/* Icon Box */}
+                      <div className="pt-6">
+                        <div
+                          className={`inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br ${value.color} rounded-lg shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-500`}
+                        >
+                          <Icon
+                            className="w-12 h-12 text-white"
+                            strokeWidth={2}
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Animated Border Effect */}
+                    <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-orange-500 via-orange-400 to-orange-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+
+                    {/* Subtle Background Pattern */}
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-orange-50 to-transparent rounded-full blur-3xl opacity-0 group-hover:opacity-50 transition-opacity duration-500"></div>
+                  </div>
+                </ScrollAnimation>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </ScrollAnimation>
+  );
+}
