@@ -37,7 +37,7 @@ export default function ConstructionAboutSection() {
             <ScrollAnimation direction="right" delay={0.2}> {/* Content slides from right */}
               <div className="space-y-6">
                 {/* Subtitle */}
-                <h5 className="text-orange-500 font-semibold text-sm md:text-base uppercase tracking-wider">
+                <h5 className="text-orange-500 font-semibold text-sm md:text-base uppercase tracking-wider mt-14 md:mt-0">
                   Geo - LEaders
                 </h5>
 

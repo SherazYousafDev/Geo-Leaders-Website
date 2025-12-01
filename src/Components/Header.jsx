@@ -12,12 +12,12 @@ import { IoIosArrowDown } from "react-icons/io";
 
 export default function Header() {
   const [navOpen, setNavOpen] = useState(false);
-  const [searchOpen, setSearchOpen] = useState(false);
+  // const [searchOpen, setSearchOpen] = useState(false);
 
   return (
     <header className="w-full ">
       {/* 🔶 TOP STRIP */}
-      <div className="relative w-full h-auto py-2 overflow-hidden hidden sm:block">
+      <div className="relative w-full h-10 py-2 overflow-hidden hidden sm:block">
         {/* Background Layers */}
         <div className="absolute inset-0 bg-[#FEBC34]"></div>
         <div
@@ -56,7 +56,7 @@ export default function Header() {
 
       {/* 🔷 MIDDLE HEADER */}
       <div className="bg-white border-b">
-        <div className="container mx-auto px-4 py-4 flex flex-col md:flex-row md:justify-between md:items-center">
+        <div className="container mx-auto px-4 py-4 flex flex-col md:flex-row md:justify-between md:items-center h-24">
           {/* Logo */}
           <div className="flex justify-center md:justify-start">
             <a href="/" className="block">
@@ -200,16 +200,13 @@ export default function Header() {
               <a href="/services">Services</a>
             </li>
             <li>
-              <a href="#">Templates</a>
-            </li>
-            <li>
               <a href="/contact">Contact</a>
             </li>
           </ul>
         )}
 
         {/* Search Box */}
-        {searchOpen && (
+        {/* {searchOpen && (
           <div className="absolute right-96 top-18 bg-slate-500 border border-b-orange-600 p-4 shadow-lg rounded w-64">
             <input
               type="text"
@@ -217,7 +214,7 @@ export default function Header() {
               className="w-full border px-3 py-2 rounded"
             />
           </div>
-        )}
+        )} */}
       </nav>
     </header>
   );

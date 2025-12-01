@@ -1,16 +1,25 @@
 import React from "react";
-import { Layers, Shield, Hammer } from "lucide-react";
+import {
+  Layers,
+  Shield,
+  Hammer,
+  ShieldCheck,
+  UserCheck,
+  Leaf,
+  Sparkles,
+} from "lucide-react";
+
 import ScrollAnimation from "./ScrollAnimation";
 
 export default function ValuesCardsSection() {
   const values = [
     {
       id: 1,
-      title: "Quality",
+      title: "Safety",
       description:
-        "We are dedicated to delivering work of the highest quality, adhering to industry standards and best practices to ensure the success of every project.",
-      icon: Layers,
-      color: "from-blue-600 to-blue-700",
+        "At GEO-Leaders, we prioritize the safety of our employees, clients, and the communities we serve. Every project is executed with a stringent focus on safety protocols and standards.",
+      icon: ShieldCheck,
+      color: "from-green-500 to-green-600",
     },
     {
       id: 2,
@@ -26,7 +35,31 @@ export default function ValuesCardsSection() {
       description:
         "We embrace innovation and continually seek out new technologies and methods to improve our services, ensuring that we deliver the best possible outcomes for our clients.",
       icon: Hammer,
-      color: "from-blue-600 to-blue-700",
+      color: "from-purple-500 to-purple-600",
+    },
+    {
+      id: 4,
+      title: "Quality",
+      description:
+        "We are dedicated to delivering work of the highest quality, adhering to industry standards and best practices to ensure the success of every project.",
+      icon: Layers,
+      color: "from-orange-500 to-orange-600",
+    },
+    {
+      id: 5,
+      title: "Customer Focus",
+      description:
+        "Our clients' needs are central to our operations. We work closely with our clients to understand their challenges and provide tailored solutions that meet their specific requirements.",
+      icon: UserCheck,
+      color: "from-pink-500 to-pink-600",
+    },
+    {
+      id: 6,
+      title: "Sustainability",
+      description:
+        "We are committed to environmentally responsible practices that minimize our impact on the environment and contribute to the sustainability of the communities we work in.",
+      icon: Leaf,
+      color: "from-green-400 to-green-500",
     },
   ];
 
@@ -36,16 +69,27 @@ export default function ValuesCardsSection() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <ScrollAnimation direction="up" delay={0.1}>
-            <div>
-              <p className="mb-2 text-[#FF5E15] font-semibold">What We Stand For</p>
-              <h5 className="text-[#181D4E] font-semibold md:text-3xl uppercase tracking-wider mb-6">
-                Our Core Values
-              </h5>
+            <div className=" mb-16 space-y-4">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-slate-100 
+              border-[#FF5E15] border-2 rounded-full">
+                <Sparkles className="w-4 h-4 text-[#00245C]" />
+                <span className="text-[#00245C] font-semibold text-sm uppercase tracking-wider">
+                  What We Stand For
+                </span>
+              </div>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#181D4E] leading-tight">
+                Our{" "}
+                <span className="text-[#ff5100] ">
+                  Core
+                </span>{" "}
+                Values
+              </h2>
+              
             </div>
           </ScrollAnimation>
 
           {/* Values Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 items-stretch">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 items-stretch">
             {values.map((value, index) => {
               const Icon = value.icon;
               return (
@@ -57,7 +101,7 @@ export default function ValuesCardsSection() {
                   <div className="group relative bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 hover:border-orange-200 h-full">
                     {/* Card Content */}
                     <div className="p-8 space-y-6">
-                      {/* Title with Orange Accent */}
+                      {/* Title with Accent */}
                       <div className="flex items-start gap-3">
                         <div className="w-1.5 h-8 bg-orange-500 rounded-full flex-shrink-0"></div>
                         <h3 className="text-2xl md:text-3xl font-bold text-gray-900 group-hover:text-orange-500 transition-colors duration-300">
@@ -83,7 +127,7 @@ export default function ValuesCardsSection() {
                       </div>
                     </div>
 
-                    {/* Animated Border Effect */}
+                    {/* Animated Border */}
                     <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-orange-500 via-orange-400 to-orange-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
 
                     {/* Subtle Background Pattern */}

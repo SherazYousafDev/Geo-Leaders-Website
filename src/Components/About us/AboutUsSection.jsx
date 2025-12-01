@@ -28,12 +28,9 @@ export default function AboutUsHeroSection() {
                   />
                 </div>
 
-                {/* Decorative Elements */}
-                <div className="absolute -top-6 -left-6 w-24 h-24 bg-yellow-400 rounded-full blur-2xl opacity-50"></div>
-                <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-orange-400 rounded-full blur-3xl opacity-40"></div>
+               
 
-                {/* Small Accent Dot */}
-                <div className="absolute top-8 left-8 w-4 h-4 bg-yellow-400 rounded-full shadow-lg"></div>
+              
               </div>
             </div>
           </ScrollAnimation>
