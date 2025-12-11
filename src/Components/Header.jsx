@@ -54,7 +54,7 @@ export default function Header() {
         <div
           className="absolute inset-0"
           style={{
-            backgroundColor: "#ffffff",
+            backgroundColor: "#ecedf0",
             backgroundImage:
               "radial-gradient(rgba(0, 0, 0, 0.200) 1px, transparent 0)",
             backgroundSize: "30px 30px",
@@ -76,6 +76,7 @@ export default function Header() {
           {/* Contact Items */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-8 md:gap-20 mt-4 md:mt-0">
             {/* Call Us */}
+            {/* Call Us */}
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 bg-prim rounded-full flex items-center justify-center">
                 <Phone className="text-white" size={24} strokeWidth={2.5} />
@@ -84,11 +85,16 @@ export default function Header() {
                 <span className="text-gray-900 font-light text-sm sm:text-base">
                   Call Us Now
                 </span>
-                <span className="text-gray-900 font-medium text-base sm:text-lg">
+                <a
+                  href="tel:+971557745783"
+                  className="text-gray-900 font-medium text-base sm:text-lg hover:text-prim transition-colors duration-300"
+                >
                   +971 55 774 5783
-                </span>
+                </a>
               </div>
             </div>
+
+            
 
             {/* Address */}
             <div className="flex items-center gap-3">
@@ -99,9 +105,14 @@ export default function Header() {
                 <span className="text-gray-900 font-light text-sm sm:text-base">
                   Office Address
                 </span>
-                <span className="text-gray-900 font-medium text-base sm:text-lg">
+                <a
+                  href="https://www.google.com/maps/place/Jebel+Ali,+Dubai,+United+Arab+Emirates"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-900 font-medium text-base sm:text-lg hover:text-prim transition-colors duration-300"
+                >
                   Jabil Ali – Dubai - UAE
-                </span>
+                </a>
               </div>
             </div>
           </div>
@@ -136,15 +147,11 @@ export default function Header() {
                  group-hover:visible transition-all duration-300 z-50"
               >
                 <li className="px-4 py-3 hover:bg-gray-50 border-b">
-                  <Link to="/services">
-                    Piling Foundation Engineering
-                  </Link>
+                  <Link to="/services">Piling Foundation Engineering</Link>
                 </li>
 
                 <li className="px-4 py-3 hover:bg-gray-50 border-b">
-                  <Link to="/services">
-                    Ground Improvement Techniques
-                  </Link>
+                  <Link to="/services">Ground Improvement Techniques</Link>
                 </li>
 
                 <li className="px-4 py-3 hover:bg-gray-50 border-b">

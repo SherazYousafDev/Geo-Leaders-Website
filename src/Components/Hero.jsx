@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
-    <div className="relative w-full h-[600px] md:h-[650px] overflow-hidden">
+    <div className="relative w-full h-[600px] md:h-[650px] overflow-hidden bg-[#d6d9de]">
       {/* Background Video */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover z-0"

@@ -15,7 +15,7 @@ function TopArrow() {
       >
         <ChevronUp className="w-6 h-6" strokeWidth={3} />
       </button>
-      ;
+     
     </div>
   );
 }

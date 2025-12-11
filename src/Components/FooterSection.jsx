@@ -25,6 +25,8 @@ export default function FooterSection() {
     { name: "Home", url: "/" },
     { name: "About", url: "/about" },
     { name: "Services", url: "/services" },
+    { name: "Certificates", url: "/certificates" },
+    { name: "Machinery", url: "/machinery" },
     { name: "Contact", url: "/contact" },
   ];
 

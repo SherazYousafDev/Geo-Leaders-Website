@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { Check, ExternalLink } from "lucide-react";
 import comp1 from "../assets/images/comp1.jpg";
 import comp2 from "../assets/images/comp2.jpeg";
+import icon1 from "../assets/images/comp-icon1.png"
+import icon2 from "../assets/images/comp-icon2.png";
 import ScrollAnimation from "./ScrollAnimation"; // <-- Import your wrapper
 
 export default function ConstructionAboutSection() {
@@ -10,7 +12,7 @@ export default function ConstructionAboutSection() {
     <ScrollAnimation direction="up">
       {" "}
       {/* Animate entire section from bottom */}
-      <div className="w-full bg-white py-16 md:py-20 lg:py-24">
+      <div className="w-full bg-[#e7e8ea] py-16 md:py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left Side - Images */}
@@ -42,7 +44,7 @@ export default function ConstructionAboutSection() {
               {/* Content slides from right */}
               <div className="space-y-6">
                 {/* Subtitle */}
-                <h5 className="text-prim font-semibold text-sm md:text-base uppercase tracking-wider mt-14 md:mt-0">
+                <h5 className="text-main font-bold text-sm md:text-base lg:text-xl uppercase tracking-wider mt-14 md:mt-0">
                   Geo - LEaders
                 </h5>
 
@@ -69,11 +71,8 @@ export default function ConstructionAboutSection() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
                   <div className="flex items-start gap-4">
                     <div className="shrink-0">
-                      <div className="w-14 h-14 rounded-full flex items-center justify-center">
-                        <img
-                          src="https://gracethemesdemo.com/dreambuild/wp-content/uploads/2024/07/company_icon1.png"
-                          alt=""
-                        />
+                      <div className="w-14 h-14 rounded-full flex bg[#e8eaed] items-center justify-center">
+                        <img src={icon1} alt="company icon" />
                       </div>
                     </div>
                     <div>
@@ -86,10 +85,7 @@ export default function ConstructionAboutSection() {
                   <div className="flex items-start gap-4">
                     <div className="shrink-0">
                       <div className="w-14 h-14 rounded-full flex items-center justify-center">
-                        <img
-                          src="https://gracethemesdemo.com/dreambuild/wp-content/uploads/2024/07/company_icon2.png"
-                          alt=""
-                        />
+                        <img src={icon2} alt="company icon" />
                       </div>
                     </div>
                     <div>
@@ -110,7 +106,7 @@ export default function ConstructionAboutSection() {
                   ].map((text, i) => (
                     <div key={i} className="flex items-center gap-3">
                       <Check
-                        className="w-5 h-5 text-main shrink-0"
+                        className="w-5 h-5 text-sec shrink-0"
                         strokeWidth={3}
                       />
                       <span className="text-gray-700 font-medium">{text}</span>

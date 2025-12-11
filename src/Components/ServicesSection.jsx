@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import { Sparkles, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import {
-  GiDrill,
-  GiGroundbreaker,
-  GiMountainCave,
-  GiBrickWall,
-} from "react-icons/gi";
+import ScrollAnimation from "./ScrollAnimation"; // Ensure the path is correct
 
-import ScrollAnimation from "./ScrollAnimation"; // Make sure the path is correct
+// Import your custom images
+import Piling from "../assets/images/pilingImg.jpeg";
+import groundImg from "../assets/images/groundImg.jpeg";
+import slopeImg from "../assets/images/slopeImg.jpg";
+import shoringImg from "../assets/images/shoringImg.jpg";
 
 export default function ServicesSection() {
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -19,40 +18,32 @@ export default function ServicesSection() {
       number: "01",
       title: "Piling Foundation Engineering",
       description:
-        "GEO-Leaders specializes in the design and construction of deep foundations, including bored piles, and micropiles. Our expertise ensures that foundations are tailored to the specific soil conditions and load requirements of each project, providing a stable and durable base for structures of all sizes.",
-      icon: GiDrill,
-      bgColor: "bg-white",
-      numberBg: "bg-[var(--color-main)]",
+        "GEO-Leaders specializes in the design and construction of deep foundations, including bored piles, and micropiles. Our expertise ensures that foundations are tailored to the specific soil conditions and load requirements of each project.",
+      image: Piling,
     },
     {
       id: 2,
       number: "02",
       title: "Ground Improvement Techniques",
       description:
-        "We offer a range of ground improvement services aimed at enhancing the properties of soil to support construction activities. Our techniques include soil stabilization, compaction grouting, vibro-compaction and vibro-replacement which improve the load-bearing capacity, reduce settlement, and mitigate liquefaction risks in challenging ground conditions.",
-      icon: GiGroundbreaker,
-      bgColor: "bg-white",
-      numberBg: "bg-[var(--color-main)]",
+        "We offer a range of ground improvement services aimed at enhancing the properties of soil to support construction activities. Our techniques improve load-bearing capacity, reduce settlement, and mitigate liquefaction risks.",
+      image: groundImg,
     },
     {
       id: 3,
       number: "03",
       title: "Slope Stability Analysis",
       description:
-        "Our team conducts comprehensive slope stability analysis to assess and manage the risk of landslides and soil movement on sloped terrains. We utilize advanced modeling and analysis tools to design effective stabilization measures, such as retaining walls, soil nails, and geosynthetics, ensuring long-term stability and safety.",
-      icon: GiMountainCave,
-      bgColor: "bg-white",
-      numberBg: "bg-[var(--color-main)]",
+        "Our team conducts comprehensive slope stability analysis to assess and manage the risk of landslides and soil movement. We design effective stabilization measures, ensuring long-term stability and safety.",
+      image: slopeImg,
     },
     {
       id: 4,
       number: "04",
       title: "Earth Retaining Shoring Structures",
       description:
-        "Provides innovative solutions for earth retaining structures, including sheet piling, diaphragm walls, soldier piles, and reinforced earth systems. Our designs are customized to meet the specific needs of each site, whether for temporary excavation support or permanent retaining walls, ensuring structural integrity and safety.",
-      icon: GiBrickWall,
-      bgColor: "bg-white",
-      numberBg: "bg-[var(--color-main)]",
+        "Provides innovative solutions for earth retaining structures, including sheet piling, diaphragm walls, soldier piles, and reinforced earth systems. Designs are customized for temporary or permanent solutions.",
+      image: shoringImg,
     },
   ];
 
@@ -83,7 +74,6 @@ export default function ServicesSection() {
           {/* Services Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
             {services.map((service, index) => {
-              const Icon = service.icon;
               const isHovered = hoveredCard === service.id;
 
               return (
@@ -95,9 +85,7 @@ export default function ServicesSection() {
                   <div
                     onMouseEnter={() => setHoveredCard(service.id)}
                     onMouseLeave={() => setHoveredCard(null)}
-                    className={`group relative ${
-                      service.bgColor
-                    } rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border-2 h-full ${
+                    className={`group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border-2 h-full ${
                       isHovered
                         ? "border-[var(--color-main)] scale-105"
                         : "border-gray-100"
@@ -105,9 +93,7 @@ export default function ServicesSection() {
                   >
                     {/* Number Badge */}
                     <div className="absolute top-6 right-6 z-10">
-                      <div
-                        className={`w-16 h-16 rounded-xl ${service.numberBg} flex items-center justify-center shadow-lg transform group-hover:rotate-12 transition-all duration-500`}
-                      >
+                      <div className="w-16 h-16 rounded-xl bg-[var(--color-main)] flex items-center justify-center shadow-lg transform group-hover:rotate-12 transition-all duration-500">
                         <span className="text-white font-bold text-xl">
                           {service.number}
                         </span>
@@ -116,11 +102,13 @@ export default function ServicesSection() {
 
                     {/* Card Content */}
                     <div className="relative p-8 md:p-10 space-y-6">
-                      {/* Icon Circle */}
-                      <div
-                        className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl ${service.numberBg} shadow-lg group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500`}
-                      >
-                        <Icon className="w-10 h-10 text-white" />
+                      {/* Image Circle */}
+                      <div className="inline-flex items-center justify-center w-40 h-40 rounded-2xl shadow-lg overflow-hidden group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500">
+                        <img
+                          src={service.image}
+                          alt={service.title}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
 
                       {/* Title */}
@@ -133,7 +121,7 @@ export default function ServicesSection() {
                         {service.description}
                       </p>
 
-                      {/* Read More Link */}
+                      {/* Learn More Link */}
                       <div className="pt-4">
                         <Link
                           to="/services"

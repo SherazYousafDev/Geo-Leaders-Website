@@ -7,9 +7,16 @@ import Contact from "./Pages/Contact";
 import ScrollToTop from "./Components/ScrollToTop";
 import Certificates from "./Pages/Certificates";
 import Machinery from "./Pages/Machinery";
-
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    const handleContextMenu = (e) => e.preventDefault();
+    document.addEventListener("contextmenu", handleContextMenu);
+
+    return () => document.removeEventListener("contextmenu", handleContextMenu);
+  }, []);
+
   return (
     <BrowserRouter>
       {/* <Navbar /> */}

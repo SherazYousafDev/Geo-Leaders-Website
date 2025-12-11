@@ -99,7 +99,7 @@ export default function TestimonialsSection() {
 
             {/* Right Side - Testimonial Card */}
             <div className="relative">
-              <div className="bg-gradient-to-br from-orange-500 to-orange-600  p-8 md:p-10 shadow-2xl relative overflow-hidden">
+              <div className="bg-[#313131]  p-8 md:p-10 shadow-2xl rounded-2xl relative overflow-hidden">
                 {/* Decorative Lines */}
                 <div className="absolute top-8 left-8 flex items-center gap-2">
                   <div className="w-16 h-1 bg-white"></div>
@@ -110,7 +110,7 @@ export default function TestimonialsSection() {
                 {/* Large Quote Icon - Top Right */}
                 <div className="absolute top-6 right-6">
                   <Quote
-                    className="w-20 h-20 text-main opacity-80"
+                    className="w-20 h-20 text-sec opacity-80"
                     fill="currentColor"
                   />
                 </div>
@@ -169,7 +169,7 @@ export default function TestimonialsSection() {
       </div>
 
       {/* Stats Counter Section */}
-      <div className="bg-[#FEBC34] py-8 md:py-8">
+      <div className="bg-sec py-8 md:py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Experience Counter */}
