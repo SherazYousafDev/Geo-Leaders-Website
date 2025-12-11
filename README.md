@@ -18,10 +18,16 @@ If you are developing a production application, we recommend using TypeScript wi
 
 
 
-## yellow: 
 
-#FEBC34 
 
 ## orange 
 
 #FF5E15
+
+## Blue - Primary color:
+
+#1C3867
+
+## yellow: secondary Color:
+
+#FEBC34 

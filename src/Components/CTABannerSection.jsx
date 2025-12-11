@@ -74,7 +74,7 @@ export default function CTABannerSection() {
               {/* Discover More Button */}
               <Link
                 to="/about"
-                className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-md transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 min-w-[200px] justify-center"
+                className="inline-flex items-center gap-2 bg-main hover:bg-head text-white font-bold px-8 py-4 rounded-md transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 min-w-[200px] justify-center"
               >
                 <span className="text-lg">Discover More</span>
                 <svg

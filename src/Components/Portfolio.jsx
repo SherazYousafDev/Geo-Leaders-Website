@@ -42,25 +42,34 @@ export default function Portfolio() {
   return (
     <div className="w-full bg-gray-100 py-16 md:py-20 lg:py-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
         {/* Header */}
         <ScrollAnimation direction="up">
-          <div className="text-center mb-12 md:mb-16">
-            <h5 className="text-orange-500 font-semibold text-sm uppercase tracking-wider mb-3">
+          <div className="text-center mb-12 md:mb-16 max-w-3xl mx-auto">
+            {/* Section Label */}
+            <h5 className="text-[var(--color-sec)] font-semibold text-sm uppercase tracking-wider mb-2">
               Our Recent Work
             </h5>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#181D4E] leading-tight">
-              Recently Completed Projects
+
+            {/* Main Heading */}
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[var(--color-prim)] leading-tight">
+              Recently Completed{" "}
+              <span className="text-[var(--color-sec)]">Projects</span>
             </h2>
+
+            {/* Optional Subheading */}
+            <p className="text-gray-600 text-base md:text-lg mt-3">
+              Explore some of our latest geotechnical projects that showcase
+              quality, innovation, and reliability.
+            </p>
           </div>
         </ScrollAnimation>
 
         {/* Desktop Grid */}
         <div className="hidden lg:grid lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <ScrollAnimation 
-              key={project.id} 
-              direction={index % 2 === 0 ? "left" : "right"} 
+            <ScrollAnimation
+              key={project.id}
+              direction={index % 2 === 0 ? "left" : "right"}
               delay={0.1 + index * 0.1}
             >
               <ProjectCard project={project} />
@@ -94,19 +103,18 @@ export default function Portfolio() {
           <div className="flex justify-center gap-4 mt-8">
             <button
               onClick={prevSlide}
-              className="w-12 h-12 bg-white hover:bg-orange-500 text-gray-800 hover:text-white rounded-full shadow-lg flex items-center justify-center"
+              className="w-12 h-12 bg-white hover:bg-sec text-gray-800 hover:text-white rounded-full shadow-lg flex items-center justify-center"
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
             <button
               onClick={nextSlide}
-              className="w-12 h-12 bg-white hover:bg-orange-500 text-gray-800 hover:text-white rounded-full shadow-lg flex items-center justify-center"
+              className="w-12 h-12 bg-white hover:bg-sec text-gray-800 hover:text-white rounded-full shadow-lg flex items-center justify-center"
             >
               <ChevronRight className="w-6 h-6" />
             </button>
           </div>
         </div>
-
       </div>
     </div>
   );
@@ -134,7 +142,7 @@ function ProjectCard({ project }) {
       {/* Bottom content */}
       <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
         <div className={`transition-all duration-500 ${isHovered ? 'opacity-0 -translate-y-4' : 'opacity-100'}`}>
-          <div className="inline-block px-3 py-1 bg-orange-500 rounded text-xs font-semibold mb-3">
+          <div className="inline-block px-3 py-1 bg-sec rounded text-xs font-semibold mb-3">
             {project.category}
           </div>
           <h3 className="text-2xl font-bold">{project.title}</h3>
@@ -143,7 +151,7 @@ function ProjectCard({ project }) {
 
       {/* Hover content */}
       <div className={`absolute inset-0 flex flex-col justify-center items-center p-8 text-white text-center transition-all duration-500 ${isHovered ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-        <div className="inline-block px-3 py-1 bg-orange-500 rounded text-xs font-semibold mb-4">
+        <div className="inline-block px-3 py-1 bg-sec rounded text-xs font-semibold mb-4">
           {project.category}
         </div>
 
@@ -156,7 +164,7 @@ function ProjectCard({ project }) {
         )}
 
         <button className="group/btn flex items-center gap-2">
-          <span className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center group-hover/btn:translate-x-2 transition-all duration-300">
+          <span className="w-12 h-12 bg-sec rounded-full flex items-center justify-center group-hover/btn:translate-x-2 transition-all duration-300">
             <ArrowRight className="w-5 h-5" />
           </span>
         </button>

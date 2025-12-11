@@ -41,10 +41,10 @@ export default function WorkingProcessSection() {
         {/* Header Section */}
         <ScrollAnimation direction="up">
           <div className="text-center mb-16">
-            <h5 className="text-orange-500 font-semibold text-sm md:text-base uppercase tracking-wider mb-3">
+            <h5 className="text-sec font-semibold text-sm md:text-base uppercase tracking-wider mb-3">
               Easy Steps
             </h5>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-main leading-tight">
               Our Working Process
             </h2>
           </div>
@@ -66,14 +66,14 @@ export default function WorkingProcessSection() {
                     {/* Step Container */}
                     <div className="relative group">
                       {/* Number Badge */}
-                      <div className="absolute -top-4 -right-4 z-20 w-14 h-14 bg-orange-500 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      <div className="absolute -top-4 -right-4 z-20 w-14 h-14 bg-prim rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
                         <span className="text-white font-bold text-lg">{step.number}</span>
                       </div>
 
                       {/* Circle Container */}
-                      <div className="relative w-48 h-48 rounded-full border-4 border-orange-500 bg-gray-50 flex items-center justify-center group-hover:shadow-2xl group-hover:border-orange-600 transition-all duration-300">
+                      <div className="relative w-48 h-48 rounded-full border-4 border-sec bg-gray-50 flex items-center justify-center group-hover:shadow-2xl group-hover:border-sec transition-all duration-300">
                         <Icon 
-                          className="w-20 h-20 text-gray-700 group-hover:text-orange-500 group-hover:scale-110 transition-all duration-300" 
+                          className="w-20 h-20 text-gray-700 group-hover:text-sec group-hover:scale-110 transition-all duration-300" 
                           strokeWidth={1.5}
                         />
                       </div>
@@ -82,7 +82,7 @@ export default function WorkingProcessSection() {
                       {index < steps.length - 1 && (
                         <div className="absolute top-1/2 -right-[60px] transform -translate-y-1/2 z-10">
                           <svg 
-                            className="w-24 h-8 text-orange-500" 
+                            className="w-24 h-8 text-sec" 
                             viewBox="0 0 100 40" 
                             fill="none" 
                             xmlns="http://www.w3.org/2000/svg"

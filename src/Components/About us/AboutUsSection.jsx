@@ -40,7 +40,7 @@ export default function AboutUsHeroSection() {
             <div className="space-y-8 order-1 lg:order-2">
               {/* Subtitle */}
               <div>
-                <span className="inline-block text-[#FF5E15] font-bold text-sm md:text-base uppercase tracking-widest">
+                <span className="inline-block text-main font-bold text-sm md:text-base uppercase tracking-widest">
                   ABOUT US
                 </span>
               </div>

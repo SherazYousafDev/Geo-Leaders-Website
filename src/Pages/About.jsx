@@ -3,8 +3,9 @@ import AboutUsHeroSection from "../Components/About us/AboutUsSection";
 import AboutUsTeam from "../Components/About us/AboutUsTeam";
 import FooterSection from "../Components/FooterSection";
 import Header from "../Components/Header";
+import TopArrow from "../Components/TopArrow";
 import CTABannerSection from "../Components/CTABannerSection";
-import CertificatesSection from "../Components/CertificatesSection";
+
 
 
 
@@ -12,10 +13,10 @@ export default function About() {
   return (
     <div>
       <Header/>
+      <TopArrow/>
       <AboutUsHeroSection/>
       <AboutUsMission/>
       <AboutUsTeam/>
-      <CertificatesSection/>
       <CTABannerSection/>
       <FooterSection/>
     </div>

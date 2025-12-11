@@ -81,7 +81,7 @@ export default function TestimonialsSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left Side - Content */}
             <div className="text-white space-y-2">
-              <h5 className="text-orange-500 font-semibold text-sm md:text-base uppercase tracking-wider">
+              <h5 className="text-sec font-semibold text-sm md:text-base uppercase tracking-wider">
                 Client Testimonials
               </h5>
 
@@ -91,7 +91,7 @@ export default function TestimonialsSection() {
 
               <p className="text-gray-300 leading-relaxed text-base max-w-md wrap-break-word">
                 Our clients trust us because we deliver exactly what we promise
-                — strong foundations, reliable engineering, and consistent
+                strong foundations, reliable engineering, and consistent
                 quality. Here’s what industry professionals and partners say
                 about working with GEO-Leaders.
               </p>
@@ -110,7 +110,7 @@ export default function TestimonialsSection() {
                 {/* Large Quote Icon - Top Right */}
                 <div className="absolute top-6 right-6">
                   <Quote
-                    className="w-20 h-20 text-red-700 opacity-80"
+                    className="w-20 h-20 text-main opacity-80"
                     fill="currentColor"
                   />
                 </div>

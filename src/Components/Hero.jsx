@@ -5,13 +5,15 @@ export default function Hero() {
     <div className="relative w-full h-[600px] md:h-[650px] overflow-hidden">
       {/* Background Video */}
       <video
-        className="absolute top-0 left-0 w-full h-full object-cover"
+        className="absolute top-0 left-0 w-full h-full object-cover z-0"
         autoPlay
         muted
         loop
         playsInline
-        preload="none"
+        preload="metadata"
+        poster="/videos/hero-poster.jpg"
       >
+        <source src="/videos/hero-video.webm" type="video/webm" />
         <source src="/videos/hero-video.mp4" type="video/mp4" />
       </video>
 
@@ -34,14 +36,14 @@ export default function Hero() {
           <div className="flex gap-4">
             <Link
               to="/about"
-              className="px-10 py-4 bg-white text-black font-semibold hover:bg-[#FF5E15] transition text-xs md:text-sm lg:text-base"
+              className="px-10 py-4 bg-white text-black font-semibold hover:bg-main hover:text-white transition text-xs md:text-sm lg:text-base"
             >
               Discover More
             </Link>
 
             <Link
               to="/services"
-              className="px-10 py-4 bg-[#FEBC34] text-black font-semibold hover:bg-[#FF5E15] transition text-xs md:text-sm lg:text-base"
+              className="px-10 py-4 bg-main  font-semibold hover:bg-sec transition text-xs md:text-sm lg:text-base"
             >
               Our Services
             </Link>

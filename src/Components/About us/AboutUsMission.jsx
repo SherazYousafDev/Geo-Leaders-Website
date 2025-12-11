@@ -69,7 +69,7 @@ export default function AboutUsMission() {
             <span className="text-yellow-600 font-semibold text-sm uppercase tracking-wider">Who We Are</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900">
-            Our <span className=" bg-clip-text text-[#FF5E15]">Foundation</span>
+            Our <span className=" bg-clip-text text-main">Foundation</span>
           </h2>
         </motion.div>
 

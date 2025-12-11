@@ -64,28 +64,28 @@ export default function FooterSection() {
               <div className="flex items-center gap-3">
                 <a
                   href="#"
-                  className="w-10 h-10 bg-blue-800 hover:bg-orange-500 rounded-full flex items-center justify-center transition-all duration-300 group"
+                  className="w-10 h-10 bg-main hover:bg-sec rounded-full flex items-center justify-center transition-all duration-300 group"
                   aria-label="Facebook"
                 >
                   <Facebook className="w-5 h-5 text-white" fill="white" />
                 </a>
                 <a
                   href="#"
-                  className="w-10 h-10 bg-blue-800 hover:bg-orange-500 rounded-full flex items-center justify-center transition-all duration-300 group"
+                  className="w-10 h-10 bg-main hover:bg-sec rounded-full flex items-center justify-center transition-all duration-300 group"
                   aria-label="Twitter"
                 >
                   <Twitter className="w-5 h-5 text-white" fill="white" />
                 </a>
                 <a
                   href="#"
-                  className="w-10 h-10 bg-blue-800 hover:bg-orange-500 rounded-full flex items-center justify-center transition-all duration-300 group"
+                  className="w-10 h-10 bg-main hover:bg-sec rounded-full flex items-center justify-center transition-all duration-300 group"
                   aria-label="LinkedIn"
                 >
                   <Linkedin className="w-5 h-5 text-white" fill="white" />
                 </a>
                 <a
                   href="#"
-                  className="w-10 h-10 bg-blue-800 hover:bg-orange-500 rounded-full flex items-center justify-center transition-all duration-300 group"
+                  className="w-10 h-10 bg-main hover:bg-sec rounded-full flex items-center justify-center transition-all duration-300 group"
                   aria-label="Instagram"
                 >
                   <Instagram className="w-5 h-5 text-white" />
@@ -103,7 +103,7 @@ export default function FooterSection() {
                   <li key={index}>
                     <Link
                       to={link.url}
-                      className="text-gray-300 hover:text-orange-500 transition-colors duration-300 flex items-center gap-2 group"
+                      className="text-gray-300 hover:text-sec transition-colors duration-300 flex items-center gap-2 group"
                     >
                       <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                       <span>{link.name}</span>
@@ -123,7 +123,7 @@ export default function FooterSection() {
                   <li key={index}>
                     <a
                       href="/services"
-                      className="text-gray-300 hover:text-orange-500 transition-colors duration-300 flex items-center gap-2 group"
+                      className="text-gray-300 hover:text-sec transition-colors duration-300 flex items-center gap-2 group"
                     >
                       <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                       <span>{service}</span>
@@ -151,7 +151,7 @@ export default function FooterSection() {
                 />
                 <button
                   onClick={handleSubmit}
-                  className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-md transition-all duration-300 flex items-center justify-center gap-2 group shadow-lg hover:shadow-xl"
+                  className="w-full bg-sec hover:bg-main text-white font-semibold py-3 px-6 rounded-md transition-all duration-300 flex items-center justify-center gap-2 group shadow-lg hover:shadow-xl"
                 >
                   <span>Sign up</span>
                   <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
@@ -168,14 +168,14 @@ export default function FooterSection() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Phone */}
             <div className="flex items-start gap-4 group cursor-pointer">
-              <div className="shrink-0 w-16 h-16 bg-blue-800 rounded-full flex items-center justify-center group-hover:bg-orange-500 transition-all duration-300">
+              <div className="shrink-0 w-16 h-16 bg-blue-800 rounded-full flex items-center justify-center group-hover:bg-sec transition-all duration-300">
                 <Phone className="w-7 h-7 text-white" />
               </div>
               <div>
                 <p className="text-gray-400 text-sm mb-1">Call Us On</p>
                 <a
                   href="tel: +971 55 774 5783"
-                  className="text-white text-lg font-semibold hover:text-orange-500 transition-colors duration-300"
+                  className="text-white text-lg font-semibold hover:text-sec transition-colors duration-300"
                 >
                   +971 55 774 5783
                 </a>
@@ -184,14 +184,14 @@ export default function FooterSection() {
 
             {/* Email */}
             <div className="flex items-start gap-4 group cursor-pointer">
-              <div className="flex-shrink-0 w-16 h-16 bg-blue-800 rounded-full flex items-center justify-center group-hover:bg-orange-500 transition-all duration-300">
+              <div className="flex-shrink-0 w-16 h-16 bg-blue-800 rounded-full flex items-center justify-center group-hover:bg-sec transition-all duration-300">
                 <Mail className="w-7 h-7 text-white" />
               </div>
               <div>
                 <p className="text-gray-400 text-sm mb-1">Email</p>
                 <a
                   href="mailto:info@sitename.com"
-                  className="text-white text-lg font-semibold hover:text-orange-500 transition-colors duration-300"
+                  className="text-white text-lg font-semibold hover:text-sec transition-colors duration-300"
                 >
                   Geoleaders.uae@gmail.com
                 </a>
@@ -200,7 +200,7 @@ export default function FooterSection() {
 
             {/* Location */}
             <div className="flex items-start gap-4 group cursor-pointer">
-              <div className="flex-shrink-0 w-16 h-16 bg-blue-800 rounded-full flex items-center justify-center group-hover:bg-orange-500 transition-all duration-300">
+              <div className="flex-shrink-0 w-16 h-16 bg-blue-800 rounded-full flex items-center justify-center group-hover:bg-sec transition-all duration-300">
                 <MapPin className="w-7 h-7 text-white" />
               </div>
               <div>
@@ -218,7 +218,7 @@ export default function FooterSection() {
       <div className="border-t border-blue-800 bg-blue-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-400 text-sm ">
+            <p className="text-gray-400 text-sm text-center">
               © Copyright 2025 Geo Leaders. All Rights Reserved
             </p>
           </div>

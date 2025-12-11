@@ -1,5 +1,5 @@
 import React from 'react';
-import { Check, ChevronUp } from 'lucide-react';
+import { Check } from 'lucide-react';
 import ScrollAnimation from './ScrollAnimation'; // make sure path is correct
 
 export default function WhyChooseUsSection() {
@@ -14,9 +14,7 @@ export default function WhyChooseUsSection() {
     "Qualified Specialists"
   ];
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+  
 
   return (
     <div className="w-full bg-white py-16 md:py-20 lg:py-24">
@@ -50,12 +48,12 @@ export default function WhyChooseUsSection() {
           <ScrollAnimation direction="right">
             <div className="space-y-6">
               {/* Subtitle */}
-              <h5 className="text-orange-500 font-semibold text-sm md:text-base uppercase tracking-wider">
+              <h5 className="text-main font-semibold text-sm md:text-base uppercase tracking-wider">
                 Why Choose Us
               </h5>
 
               {/* Main Heading */}
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#181D4E] leading-tight">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-head leading-tight">
                 Why We Are Different than Other Company
               </h2>
 
@@ -75,10 +73,10 @@ export default function WhyChooseUsSection() {
                     delay={0.1 + index * 0.1}
                   >
                     <div className="flex items-center gap-3 group cursor-pointer">
-                      <div className="flex-shrink-0 w-5 h-5 bg-orange-500 rounded flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <div className="flex-shrink-0 w-5 h-5 bg-sec rounded flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                         <Check className="w-3.5 h-3.5 text-white" strokeWidth={3} />
                       </div>
-                      <span className="text-gray-700 font-medium group-hover:text-orange-500 transition-colors duration-300">
+                      <span className="text-gray-700 font-medium group-hover:text-sec transition-colors duration-300">
                         {feature}
                       </span>
                     </div>
@@ -91,14 +89,7 @@ export default function WhyChooseUsSection() {
         </div>
       </div>
 
-      {/* Scroll to Top Button */}
-      <button
-        onClick={scrollToTop}
-        className="fixed bottom-8 right-8 w-14 h-14 bg-orange-500 hover:bg-orange-600 text-white rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 z-50"
-        aria-label="Scroll to top"
-      >
-        <ChevronUp className="w-6 h-6" strokeWidth={3} />
-      </button>
+      
     </div>
   );
 }

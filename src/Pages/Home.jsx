@@ -3,6 +3,7 @@ import CTABannerSection from "../Components/CTABannerSection";
 import FooterSection from "../Components/FooterSection";
 import Header from "../Components/Header";
 import Hero from "../Components/Hero";
+import TopArrow from "../Components/TopArrow";
 import Portfolio from "../Components/Portfolio";
 import ServicesSection from "../Components/ServicesSection";
 import TestimonialsSection from "../Components/TestimonialSection";
@@ -16,6 +17,7 @@ export default function Home() {
     <div>
      <Header/>
      <Hero/>
+     <TopArrow/>
      <ConstructionAboutSection/>
      <ServicesSection/>
      <ValuesCardsSection/>

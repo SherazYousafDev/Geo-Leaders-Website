@@ -1,10 +1,10 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   FaPhoneAlt,
   FaEnvelope,
   FaFacebookF,
   FaLinkedin,
-  FaSearch,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { Phone, MapPin } from "lucide-react";
@@ -12,20 +12,14 @@ import { IoIosArrowDown } from "react-icons/io";
 
 export default function Header() {
   const [navOpen, setNavOpen] = useState(false);
-  // const [searchOpen, setSearchOpen] = useState(false);
 
   return (
-    <header className="w-full ">
+    <header className="w-full">
       {/* 🔶 TOP STRIP */}
       <div className="relative w-full h-10 py-2 overflow-hidden hidden sm:block">
-        {/* Background Layers */}
-        <div className="absolute inset-0 bg-[#FEBC34]"></div>
-        <div
-          className="hidden md:block absolute top-0 bottom-0 left-1/2 right-0 bg-[#FF5E15] 
-    transform -skew-x-12 origin-left"
-        ></div>
+        <div className="absolute inset-0 bg-sec"></div>
+        <div className="hidden md:block absolute top-0 bottom-0 left-1/2 right-0 bg-prim transform -skew-x-12 origin-left"></div>
 
-        {/* Content */}
         <div className="relative z-10 container mx-auto px-4 flex flex-col gap-2 md:flex-row md:justify-between md:items-center">
           {/* Contact Info */}
           <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-8 text-black text-sm md:text-base">
@@ -55,20 +49,35 @@ export default function Header() {
       </div>
 
       {/* 🔷 MIDDLE HEADER */}
-      <div className="bg-white border-b">
-        <div className="container mx-auto px-4 py-4 flex flex-col md:flex-row md:justify-between md:items-center h-24">
+      <div className="relative border-b">
+        {/* Subtle Radial Pattern Background */}
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundColor: "#ffffff",
+            backgroundImage:
+              "radial-gradient(rgba(0, 0, 0, 0.200) 1px, transparent 0)",
+            backgroundSize: "30px 30px",
+            backgroundPosition: "-5px -5px",
+            width: "100%",
+            height: "100%",
+          }}
+        ></div>
+
+        {/* Content */}
+        <div className="relative container mx-auto px-4 py-4 flex flex-col md:flex-row md:justify-between md:items-center h-24">
           {/* Logo */}
           <div className="flex justify-center md:justify-start">
-            <a href="/" className="block">
+            <Link to="/" className="block">
               <img className="w-48 md:w-60" src="/logo.png" />
-            </a>
+            </Link>
           </div>
 
           {/* Contact Items */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-8 md:gap-20 mt-4 md:mt-0">
             {/* Call Us */}
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center">
+              <div className="w-12 h-12 bg-prim rounded-full flex items-center justify-center">
                 <Phone className="text-white" size={24} strokeWidth={2.5} />
               </div>
               <div className="flex flex-col">
@@ -83,13 +92,8 @@ export default function Header() {
 
             {/* Address */}
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center">
-                <MapPin
-                  className="text-white"
-                  size={24}
-                  strokeWidth={2.5}
-                  fill="white"
-                />
+              <div className="w-12 h-12 bg-prim rounded-full flex items-center justify-center">
+                <MapPin className="text-white" size={24} strokeWidth={2.5} />
               </div>
               <div className="flex flex-col">
                 <span className="text-gray-900 font-light text-sm sm:text-base">
@@ -105,77 +109,86 @@ export default function Header() {
       </div>
 
       {/* 🔵 NAVIGATION BAR */}
-      <nav className="bg-[#00245C] text-white relative w-full">
+      <nav className="bg-main text-white relative w-full">
         <div className="container flex justify-between items-center h-16 px-4">
-          {/* Menu Items */}
+          {/* Desktop Menu */}
           <ul className="hidden md:flex gap-12 font-medium text-lg">
             <li>
-              <a href="/" className="hover:text-[#FEBC34]">
+              <Link to="/" className="hover:text-sec">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/about" className="hover:text-[#FEBC34]">
+              <Link to="/about" className="hover:text-sec">
                 About
-              </a>
+              </Link>
             </li>
 
-            {/* Dropdown */}
+            {/* Services Dropdown */}
             <li className="relative group">
-              {/* Button */}
-              <button className="hover:text-[#FEBC34] flex items-center gap-2 ">
+              <button className="hover:text-sec flex items-center gap-2">
                 Services <IoIosArrowDown />
               </button>
 
-              {/* Dropdown */}
               <ul
                 className="absolute left-0 top-full mt-2 bg-white text-black shadow-xl rounded-lg 
                  border border-gray-100 w-56 opacity-0 invisible group-hover:opacity-100 
                  group-hover:visible transition-all duration-300 z-50"
               >
                 <li className="px-4 py-3 hover:bg-gray-50 border-b">
-                  <a href="/services#piling">Piling Foundation Engineering</a>
+                  <Link to="/services">
+                    Piling Foundation Engineering
+                  </Link>
                 </li>
 
                 <li className="px-4 py-3 hover:bg-gray-50 border-b">
-                  <a href="/services#ground">Ground Improvement Techniques</a>
+                  <Link to="/services">
+                    Ground Improvement Techniques
+                  </Link>
                 </li>
 
                 <li className="px-4 py-3 hover:bg-gray-50 border-b">
-                  <a href="/services#slope">Slope Stability Analysis</a>
+                  <Link to="/services">Slope Stability Analysis</Link>
                 </li>
 
                 <li className="px-4 py-3 hover:bg-gray-50">
-                  <a href="/services#shoring">
+                  <Link to="/services">
                     Earth Retaining & Shoring Structures
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
 
+            {/* Certificates (new) */}
             <li>
-              <a href="/contact" className="hover:text-[#FEBC34]">
+              <Link to="/certificates" className="hover:text-sec">
+                Certificates
+              </Link>
+            </li>
+
+            <li>
+              <Link to="/machinery" className="hover:text-sec">
+                Machinery
+              </Link>
+            </li>
+
+            <li>
+              <Link to="/contact" className="hover:text-sec">
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
 
-          {/* Right — Search + Button */}
+          {/* RIGHT SIDE BUTTON */}
           <div className="flex items-center gap-4">
-            {/* Search Toggle */}
-            {/* <button onClick={() => setSearchOpen(!searchOpen)}>
-              <FaSearch className="text-white text-lg hover:text-[#FEBC34]" />
-            </button> */}
-
-            {/* Quote Button */}
-            <a
-              href="/contact"
-              className="bg-[#FEBC34] text-black px-8 py-[21px] font-semibold hover:bg-[#FF5E15] hover:text-white hidden md:block"
+            <Link
+              to="/contact"
+              className="bg-sec text-black px-8 py-[21px] font-semibold hover:bg-white hover:text-main hidden md:block"
             >
               GET A FREE QUOTE
-            </a>
+            </Link>
 
-            {/* Mobile Menu Button */}
+            {/* Mobile Toggle Button */}
             <button
               onClick={() => setNavOpen(!navOpen)}
               className="md:hidden flex flex-col gap-1"
@@ -187,34 +200,36 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Mobile Nav */}
+        {/* Mobile Menu */}
         {navOpen && (
           <ul className="md:hidden bg-[#0a2d57] text-center py-4 space-y-4">
             <li>
-              <a href="/">Home</a>
+              <Link to="/" onClick={() => setNavOpen(false)}>
+                Home
+              </Link>
             </li>
             <li>
-              <a href="/about">About</a>
+              <Link to="/about" onClick={() => setNavOpen(false)}>
+                About
+              </Link>
             </li>
             <li>
-              <a href="/services">Services</a>
+              <Link to="/services" onClick={() => setNavOpen(false)}>
+                Services
+              </Link>
             </li>
             <li>
-              <a href="/contact">Contact</a>
+              <Link to="/certificates" onClick={() => setNavOpen(false)}>
+                Certificates
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" onClick={() => setNavOpen(false)}>
+                Contact
+              </Link>
             </li>
           </ul>
         )}
-
-        {/* Search Box */}
-        {/* {searchOpen && (
-          <div className="absolute right-96 top-18 bg-slate-500 border border-b-orange-600 p-4 shadow-lg rounded w-64">
-            <input
-              type="text"
-              placeholder="Search..."
-              className="w-full border px-3 py-2 rounded"
-            />
-          </div>
-        )} */}
       </nav>
     </header>
   );

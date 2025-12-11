@@ -1,15 +1,16 @@
 import React from "react";
 import { Sparkles } from "lucide-react";
 
-import pilingImg from "../assets/images/pilingImg.jpg";
-import groundImg from "../assets/images/groundImg.jpg";
+import pilingImg from "../assets/images/pilingImg.jpeg";
+import groundImg from "../assets/images/groundImg.jpeg";
 import slopeImg from "../assets/images/slopeImg.JPG";
 import shoringImg from "../assets/images/shoringImg.jpg";
-import ScrollAnimation from "../Components/ScrollAnimation";
 
+import ScrollAnimation from "../Components/ScrollAnimation";
 import Header from "../Components/Header";
-import MachinesTools from "../Components/MachinesTools";
+
 import FooterSection from "../Components/FooterSection";
+import TopArrow from "../Components/TopArrow";
 
 const Services = () => {
   const services = [
@@ -17,28 +18,28 @@ const Services = () => {
       id: "piling",
       title: "Piling Foundation Engineering",
       description:
-        "GEO-Leaders specializes in the design and construction of deep foundations, including bored piles, and micropiles. Our expertise ensures that foundations are tailored to the specific soil conditions and load requirements of each project, providing a stable and durable base for structures of all sizes...",
+        "GEO-Leaders specializes in designing and constructing deep foundations, including bored piles and micropiles. Our expert engineers ensure each foundation suits its soil and load requirements, guaranteeing long-term stability and performance.",
       image: pilingImg,
     },
     {
       id: "ground",
       title: "Ground Improvement Techniques",
       description:
-        " We offer a range of ground improvement services aimed at enhancing the properties of soil to support construction activities. Our techniques include soil stabilization, compaction grouting, vibro-compaction and vibro-replacement which improve the load-bearing capacity, reduce settlement, and mitigate liquefaction risks in challenging ground conditions... ",
+        "We offer a range of advanced ground improvement solutions such as soil stabilization, compaction grouting, vibro-compaction, and vibro-replacement that optimize soil conditions, enhance strength, and reduce settlement risks in complex projects.",
       image: groundImg,
     },
     {
       id: "slope",
       title: "Slope Stability Analysis",
       description:
-        "Our team conducts comprehensive slope stability analysis to assess and manage the risk of landslides and soil movement on sloped terrains. We utilize advanced modeling and analysis tools to design effective stabilization measures, such as retaining walls, soil nails, and geosynthetics, ensuring long-term stability and safety....",
+        "Our team performs comprehensive slope stability assessments to manage risks of landslides and ground movement. Using advanced modeling, we design stabilization systems like retaining walls, soil nailing, and geosynthetics for long-term safety.",
       image: slopeImg,
     },
     {
       id: "shoring",
       title: "Earth Retaining & Shoring Structures",
       description:
-        "provides innovative solutions for earth retaining structures, including sheet piling, diaphragm walls, soldier piles, and reinforced earth systems. Our designs are customized to meet the specific needs of each site, whether for temporary excavation support or permanent retaining walls, ensuring structural integrity and safety....",
+        "We provide efficient, innovative designs for retaining and shoring systems, including sheet piling, diaphragm walls, and soldier piles. Each solution is tailored to site-specific conditions, ensuring strength, durability, and construction safety.",
       image: shoringImg,
     },
   ];
@@ -46,63 +47,60 @@ const Services = () => {
   return (
     <>
       <Header />
+      <TopArrow />
 
-      {/* Services Section */}
-      <div className="max-w-6xl mx-auto px-6 py-16 border-b-2 border-[#FF5E15]">
-        {/* Section Header */}
+      
+      <div className="max-w-6xl mx-auto px-6 py-20 border-b-2 border-[var(--color-prim)]">
         <ScrollAnimation direction="up">
-          <div className="text-center mb-16 space-y-4">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-100 rounded-full">
-              <Sparkles className="w-4 h-4 text-orange-500" />
-              <span className="text-orange-600 font-semibold text-sm uppercase tracking-wider">
+          <div className="text-center mb-20 space-y-6">
+            <div className="inline-flex items-center gap-2 px-5 py-2 bg-[var(--color-prim)] rounded-full shadow-sm">
+              <Sparkles className="w-5 h-5 text-[var(--color-sec)]" />
+              <span className="text-[var(--color-sec)] font-semibold text-sm uppercase tracking-wider">
                 Our Expertise
               </span>
             </div>
 
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 leading-tight">
+            <h2 className="text-5xl md:text-6xl font-bold text-[var(--color-head)] leading-tight">
               Our{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600">
-                Services
-              </span>{" "}
-              That We Provide
+              <span className="text-[var(--color-prim)]">
+                Professional Services
+              </span>
             </h2>
 
-            <p className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
-              Comprehensive geotechnical solutions tailored to your project's
-              unique requirements
+            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+              Innovative geotechnical solutions designed to meet every project’s
+              technical and environmental demands.
             </p>
           </div>
         </ScrollAnimation>
 
-        {/* Services List */}
-        <div className="space-y-20">
+        <div className="space-y-24">
           {services.map((service, index) => (
             <ScrollAnimation
               key={service.id}
               direction="up"
-              delay={index * 0.15} // stagger animations
+              delay={index * 0.25}
             >
               <section
                 id={service.id}
-                className={`flex flex-col md:flex-row items-center md:space-x-12 ${
+                className={`flex flex-col md:flex-row items-center gap-12 ${
                   index % 2 !== 0 ? "md:flex-row-reverse" : ""
                 }`}
               >
-                {/* Left: Image */}
-                <div className="w-full md:w-1/3 h-64 md:h-80 rounded-xl overflow-hidden shadow-lg">
+                <div className="w-full md:w-1/2 relative group">
                   <img
                     src={service.image}
                     alt={service.title}
                     loading="lazy"
-                    className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                    className="w-full h-[400px] object-cover rounded-2xl shadow-lg transform group-hover:scale-105 transition duration-700 ease-out"
                   />
+                  <div className="absolute inset-0 bg-black/20 rounded-2xl group-hover:bg-black/10 transition" />
                 </div>
 
-                {/* Right: Text */}
-                <div className="w-full md:w-2/3 mt-8 md:mt-0">
-                  <h2 className="text-3xl font-semibold mb-4 text-gray-800">
+                <div className="w-full md:w-1/2 space-y-4">
+                  <h3 className="text-3xl font-semibold text-[var(--color-head)]">
                     {service.title}
-                  </h2>
+                  </h3>
                   <p className="text-gray-700 leading-relaxed">
                     {service.description}
                   </p>
@@ -113,7 +111,6 @@ const Services = () => {
         </div>
       </div>
 
-      <MachinesTools />
       <FooterSection />
     </>
   );
