@@ -6,13 +6,13 @@ import CTABannerSection from "../Components/CTABannerSection";
 
 const certificates = [
   {
-    img: "/images/Certificate.png", // public folder path
+    img: "/images/Certificate.webp", // public folder path
   },
   {
-    img: "/images/Certificate.png",
+    img: "/images/Certificate.webp",
   },
   {
-    img: "/images/Certificate.png",
+    img: "/images/Certificate.webp",
   },
 ];
 

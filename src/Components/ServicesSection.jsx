@@ -13,7 +13,7 @@ export default function ServicesSection() {
       title: "Piling Foundation Engineering",
       description:
         "GEO-Leaders specializes in the design and construction of deep foundations, including bored piles, and micropiles. Our expertise ensures that foundations are tailored to the specific soil conditions and load requirements of each project.",
-      image: "/images/pilingImg.jpeg",
+      image: "/images/pilingImg.webp",
     },
     {
       id: 2,
@@ -21,7 +21,7 @@ export default function ServicesSection() {
       title: "Ground Improvement Techniques",
       description:
         "We offer a range of ground improvement services aimed at enhancing the properties of soil to support construction activities. Our techniques improve load-bearing capacity, reduce settlement, and mitigate liquefaction risks.",
-      image: "/images/groundImg.jpeg",
+      image: "/images/groundImg.webp",
     },
     {
       id: 3,
@@ -29,7 +29,7 @@ export default function ServicesSection() {
       title: "Slope Stability Analysis",
       description:
         "Our team conducts comprehensive slope stability analysis to assess and manage the risk of landslides and soil movement. We design effective stabilization measures, ensuring long-term stability and safety.",
-      image: "/images/slopeImg.jpg",
+      image: "/images/slopeImg.webp",
     },
     {
       id: 4,
@@ -37,7 +37,7 @@ export default function ServicesSection() {
       title: "Earth Retaining Shoring Structures",
       description:
         "Provides innovative solutions for earth retaining structures, including sheet piling, diaphragm walls, soldier piles, and reinforced earth systems. Designs are customized for temporary or permanent solutions.",
-      image: "/images/shoringImg.jpg",
+      image: "/images/shoringImg.webp",
     },
   ];
 

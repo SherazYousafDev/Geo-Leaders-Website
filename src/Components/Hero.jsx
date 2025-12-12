@@ -13,7 +13,7 @@ export default function Hero() {
         preload="metadata"
         poster="/videos/hero-poster.jpg"
       >
-        <source src="/videos/hero-video.webm" type="video/webm" />
+        {/* <source src="/videos/hero-video.webm" type="video/webm" /> */}
         <source src="/videos/hero-video.mp4" type="video/mp4" />
       </video>
 
