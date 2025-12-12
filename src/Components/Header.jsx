@@ -94,8 +94,6 @@ export default function Header() {
               </div>
             </div>
 
-            
-
             {/* Address */}
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 bg-prim rounded-full flex items-center justify-center">
@@ -228,6 +226,12 @@ export default function Header() {
             <li>
               <Link to="/certificates" onClick={() => setNavOpen(false)}>
                 Certificates
+              </Link>
+            </li>
+
+            <li>
+              <Link to="/machinery" onClick={() => setNavOpen(false)}>
+                Machinery
               </Link>
             </li>
             <li>

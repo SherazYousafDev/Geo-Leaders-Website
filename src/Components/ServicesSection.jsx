@@ -3,12 +3,6 @@ import { Sparkles, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import ScrollAnimation from "./ScrollAnimation"; // Ensure the path is correct
 
-// Import your custom images
-import Piling from "../assets/images/pilingImg.jpeg";
-import groundImg from "../assets/images/groundImg.jpeg";
-import slopeImg from "../assets/images/slopeImg.jpg";
-import shoringImg from "../assets/images/shoringImg.jpg";
-
 export default function ServicesSection() {
   const [hoveredCard, setHoveredCard] = useState(null);
 
@@ -19,7 +13,7 @@ export default function ServicesSection() {
       title: "Piling Foundation Engineering",
       description:
         "GEO-Leaders specializes in the design and construction of deep foundations, including bored piles, and micropiles. Our expertise ensures that foundations are tailored to the specific soil conditions and load requirements of each project.",
-      image: Piling,
+      image: "/images/pilingImg.jpeg",
     },
     {
       id: 2,
@@ -27,7 +21,7 @@ export default function ServicesSection() {
       title: "Ground Improvement Techniques",
       description:
         "We offer a range of ground improvement services aimed at enhancing the properties of soil to support construction activities. Our techniques improve load-bearing capacity, reduce settlement, and mitigate liquefaction risks.",
-      image: groundImg,
+      image: "/images/groundImg.jpeg",
     },
     {
       id: 3,
@@ -35,7 +29,7 @@ export default function ServicesSection() {
       title: "Slope Stability Analysis",
       description:
         "Our team conducts comprehensive slope stability analysis to assess and manage the risk of landslides and soil movement. We design effective stabilization measures, ensuring long-term stability and safety.",
-      image: slopeImg,
+      image: "/images/slopeImg.jpg",
     },
     {
       id: 4,
@@ -43,7 +37,7 @@ export default function ServicesSection() {
       title: "Earth Retaining Shoring Structures",
       description:
         "Provides innovative solutions for earth retaining structures, including sheet piling, diaphragm walls, soldier piles, and reinforced earth systems. Designs are customized for temporary or permanent solutions.",
-      image: shoringImg,
+      image: "/images/shoringImg.jpg",
     },
   ];
 
@@ -60,10 +54,12 @@ export default function ServicesSection() {
                   Our Expertise
                 </span>
               </div>
+
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-[var(--color-head)] leading-tight">
                 Our <span className="text-[var(--color-prim)]">Services</span>{" "}
                 That We Provide
               </h2>
+
               <p className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
                 Comprehensive geotechnical solutions tailored to your project's
                 unique requirements
@@ -100,12 +96,13 @@ export default function ServicesSection() {
                       </div>
                     </div>
 
-                    {/* Card Content */}
+                    {/* Content */}
                     <div className="relative p-8 md:p-10 space-y-6">
-                      {/* Image Circle */}
+                      {/* Image */}
                       <div className="inline-flex items-center justify-center w-40 h-40 rounded-2xl shadow-lg overflow-hidden group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500">
                         <img
                           src={service.image}
+                          loading="lazy"
                           alt={service.title}
                           className="w-full h-full object-cover"
                         />

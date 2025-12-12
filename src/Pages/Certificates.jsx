@@ -1,25 +1,18 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Header from "../Components/Header";
 import FooterSection from "../Components/FooterSection";
 import TopArrow from "../Components/TopArrow";
 import CTABannerSection from "../Components/CTABannerSection";
-import Certificate from "../assets/images/Certificate.png";
 
 const certificates = [
   {
-    title: "IFG DUBAI - ISO 9001 | 2015",
-    desc: "ISO CERTIFICATE",
-    img: Certificate,
+    img: "/images/Certificate.png", // public folder path
   },
   {
-    title: "IFG DUBAI - ISO 14001 | 2015",
-    desc: "ISO CERTIFICATE",
-    img: Certificate,
+    img: "/images/Certificate.png",
   },
   {
-    title: "IFG DUBAI - ISO 45001 | 2018",
-    desc: "ISO CERTIFICATE",
-    img: Certificate,
+    img: "/images/Certificate.png",
   },
 ];
 
@@ -42,16 +35,15 @@ export default function Certificates() {
 
         {/* Certificates Grid */}
         <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 px-4">
-          {certificates.map((item, i) => (
+          {certificates.map((item, index) => (
             <div
-              key={i}
+              key={index}
               className="w-[300px] shadow-md rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow duration-300"
             >
-              {/* Certificate Image */}
               <div className="w-[300px] flex items-center justify-center p-2">
                 <img
                   src={item.img}
-                  alt={item.title}
+                  alt="certificate"
                   loading="lazy"
                   className="max-w-full max-h-[350px] object-cover transition-transform duration-300 hover:scale-105 will-change-transform"
                 />

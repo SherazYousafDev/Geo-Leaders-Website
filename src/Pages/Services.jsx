@@ -1,11 +1,5 @@
 import React from "react";
 import { Sparkles } from "lucide-react";
-
-import pilingImg from "../assets/images/pilingImg.jpeg";
-import groundImg from "../assets/images/groundImg.jpeg";
-import slopeImg from "../assets/images/slopeImg.JPG";
-import shoringImg from "../assets/images/shoringImg.jpg";
-
 import ScrollAnimation from "../Components/ScrollAnimation";
 import Header from "../Components/Header";
 import FooterSection from "../Components/FooterSection";
@@ -18,28 +12,28 @@ const Services = () => {
       title: "Piling Foundation Engineering",
       description:
         "GEO-Leaders specializes in designing and constructing deep foundations, including bored piles and micropiles. Our expert engineers ensure each foundation suits its soil and load requirements, guaranteeing long-term stability and performance.",
-      image: pilingImg,
+      image: "/images/pilingImg.jpeg",
     },
     {
       id: "ground",
       title: "Ground Improvement Techniques",
       description:
         "We offer a range of advanced ground improvement solutions such as soil stabilization, compaction grouting, vibro-compaction, and vibro-replacement that optimize soil conditions, enhance strength, and reduce settlement risks in complex projects.",
-      image: groundImg,
+      image: "/images/groundImg.jpeg",
     },
     {
       id: "slope",
       title: "Slope Stability Analysis",
       description:
         "Our team performs comprehensive slope stability assessments to manage risks of landslides and ground movement. Using advanced modeling, we design stabilization systems like retaining walls, soil nailing, and geosynthetics for long-term safety.",
-      image: slopeImg,
+      image: "/images/groundImg.jpeg",
     },
     {
       id: "shoring",
       title: "Earth Retaining & Shoring Structures",
       description:
         "We provide efficient, innovative designs for retaining and shoring systems, including sheet piling, diaphragm walls, and soldier piles. Each solution is tailored to site-specific conditions, ensuring strength, durability, and construction safety.",
-      image: shoringImg,
+      image: "/images/shoringImg.jpg",
     },
   ];
 

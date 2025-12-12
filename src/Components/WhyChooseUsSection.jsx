@@ -1,6 +1,6 @@
-import React from 'react';
-import { Check } from 'lucide-react';
-import ScrollAnimation from './ScrollAnimation'; // make sure path is correct
+import React from "react";
+import { Check } from "lucide-react";
+import ScrollAnimation from "./ScrollAnimation"; // make sure path is correct
 
 export default function WhyChooseUsSection() {
   const features = [
@@ -11,16 +11,13 @@ export default function WhyChooseUsSection() {
     "Best Sustainability",
     "Detailed Planning",
     "Certified Engineers",
-    "Qualified Specialists"
+    "Qualified Specialists",
   ];
-
-  
 
   return (
     <div className="w-full bg-white py-16 md:py-20 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          
           {/* Left Side - Images */}
           <ScrollAnimation direction="left">
             <div className="relative flex gap-6 justify-center lg:justify-start">
@@ -29,15 +26,17 @@ export default function WhyChooseUsSection() {
                 <img
                   src="https://gracethemesdemo.com/dreambuild/wp-content/uploads/2024/07/choose_us_large.jpg"
                   alt="Construction Site"
+                  loading="lazy"
                   className="w-full h-auto rounded-2xl shadow-xl object-cover"
                 />
               </div>
-              
+
               {/* Shorter Image - Offset */}
               <div className="relative w-[45%] max-w-[280px] mt-12">
                 <img
                   src="https://gracethemesdemo.com/dreambuild/wp-content/uploads/2024/07/choose_us_small.jpg"
                   alt="Construction Workers"
+                  loading="lazy"
                   className="w-full h-auto rounded-2xl shadow-xl object-cover"
                 />
               </div>
@@ -60,7 +59,10 @@ export default function WhyChooseUsSection() {
               {/* Description */}
               <div className="bg-gray-50 p-6 rounded-lg">
                 <p className="text-gray-600 leading-relaxed text-base">
-                  We deliver reliable, engineered solutions built on experience, innovation, and a strong commitment to quality and safety. Our team ensures every project is completed with precision, transparency, and on-time execution.
+                  We deliver reliable, engineered solutions built on experience,
+                  innovation, and a strong commitment to quality and safety. Our
+                  team ensures every project is completed with precision,
+                  transparency, and on-time execution.
                 </p>
               </div>
 
@@ -74,7 +76,10 @@ export default function WhyChooseUsSection() {
                   >
                     <div className="flex items-center gap-3 group cursor-pointer">
                       <div className="flex-shrink-0 w-5 h-5 bg-sec rounded flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                        <Check className="w-3.5 h-3.5 text-white" strokeWidth={3} />
+                        <Check
+                          className="w-3.5 h-3.5 text-white"
+                          strokeWidth={3}
+                        />
                       </div>
                       <span className="text-gray-700 font-medium group-hover:text-sec transition-colors duration-300">
                         {feature}
@@ -85,11 +90,8 @@ export default function WhyChooseUsSection() {
               </div>
             </div>
           </ScrollAnimation>
-
         </div>
       </div>
-
-      
     </div>
   );
 }

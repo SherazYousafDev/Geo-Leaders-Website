@@ -12,14 +12,6 @@ import TopArrow from "../Components/TopArrow";
 import CTABannerSection from "../Components/CTABannerSection";
 import FooterSection from "../Components/FooterSection";
 
-import Bauer from "../assets/images/machines/BauerImg.jpeg";
-import Soilmec from "../assets/images/machines/Soilmec.jpg";
-import StoneImg from "../assets/images/machines/StoneImg.jpg";
-import ABI from "../assets/images/machines/ABI.png";
-import Crane from "../assets/images/machines/Crane.jpeg";
-import Excavator from "../assets/images/machines/excavator.jpg";
-import Vibro from "../assets/images/machines/Vibro.webp";
-
 const Machinery = () => {
   const machines = [
     {
@@ -27,56 +19,56 @@ const Machinery = () => {
       quantity: 1,
       model: 2006,
       usage: "Rig machine",
-      image: Bauer,
+      image: "/images/machines/BauerImg.jpeg",
     },
     {
       name: "Soilmec SR40",
       quantity: 1,
       model: 2007,
       usage: "Rig machine",
-      image: Soilmec,
+      image: "/images/machines/Soilmec.jpg",
     },
     {
       name: "Stone Column Prob 135KW",
       quantity: 3,
       model: 2017,
       usage: "Stone Column",
-      image: StoneImg,
+      image: "/images/machines/StoneImg.jpg",
     },
     {
       name: "Stone Column Prob 75KW",
       quantity: 2,
       model: 2017,
       usage: "Stone Column",
-      image: StoneImg,
+      image: "/images/machines/StoneImg.jpg",
     },
     {
       name: "A.B.I Machine ZEPPELIN",
       quantity: 1,
       model: 2010,
       usage: "Stone Column",
-      image: ABI,
+      image: "/images/machines/ABI.png",
     },
     {
       name: "Crawler Crane",
       quantity: 2,
       model: 2010,
       usage: "I-Beam/Sheet Pile installation",
-      image: Crane,
+      image: "/images/machines/Crane.jpeg",
     },
     {
       name: "Excavator",
       quantity: 1,
       model: 2010,
       usage: "General Earthwork",
-      image: Excavator,
+      image: "/images/machines/excavator.jpg",
     },
     {
       name: "Vibro Hammer",
       quantity: 1,
       model: 2013,
       usage: "Excavation",
-      image: Vibro,
+      image: "/images/machines/Vibro.webp",
     },
   ];
 

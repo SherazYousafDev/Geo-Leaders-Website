@@ -1,37 +1,31 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Check, ExternalLink } from "lucide-react";
-import comp1 from "../assets/images/comp1.jpg";
-import comp2 from "../assets/images/comp2.jpeg";
-import icon1 from "../assets/images/comp-icon1.png"
-import icon2 from "../assets/images/comp-icon2.png";
 import ScrollAnimation from "./ScrollAnimation"; // <-- Import your wrapper
 
 export default function ConstructionAboutSection() {
   return (
     <ScrollAnimation direction="up">
-      {" "}
-      {/* Animate entire section from bottom */}
       <div className="w-full bg-[#e7e8ea] py-16 md:py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left Side - Images */}
             <ScrollAnimation direction="left" delay={0.1}>
-              {" "}
-              {/* Image slides from left */}
               <div className="relative">
-                <div className="relative z-10 ">
+                <div className="relative z-10">
                   <img
-                    src={comp1}
+                    src="/images/comp1.jpg"
                     alt="Construction Site"
-                    className="w-[80%] h-[500px] object-cover rounded-lg shadow-lg  "
+                    loading="lazy"
+                    className="w-[80%] h-[500px] object-cover rounded-lg shadow-lg"
                   />
                 </div>
 
                 <div className="absolute -bottom-20 right-0 lg:right-[50px] w-[280px] h-[320px] z-20">
                   <img
-                    src={comp2}
+                    src="/images/comp2.jpeg"
                     alt="Engineer Team"
+                    loading="lazy"
                     className="w-full h-full object-cover rounded-lg shadow-xl border-8 border-main"
                   />
                 </div>
@@ -40,16 +34,14 @@ export default function ConstructionAboutSection() {
 
             {/* Right Side - Content */}
             <ScrollAnimation direction="right" delay={0.2}>
-              {" "}
-              {/* Content slides from right */}
               <div className="space-y-6">
                 {/* Subtitle */}
                 <h5 className="text-main font-bold text-sm md:text-base lg:text-xl uppercase tracking-wider mt-14 md:mt-0">
-                  Geo - LEaders
+                  Geo - Leaders
                 </h5>
 
                 {/* Main Heading */}
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-head leading-tight max-w-xl wrap-break-word">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-head leading-tight max-w-xl">
                   On These Beams, We’re Building Dreams.
                 </h2>
 
@@ -64,15 +56,15 @@ export default function ConstructionAboutSection() {
                   experience and cutting-edge technology, GEO-Leaders has
                   quickly become a trusted name in the industry, known for its
                   commitment to quality and excellence in foundation and soil
-                  improvement works .
+                  improvement works.
                 </p>
 
                 {/* Features Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
                   <div className="flex items-start gap-4">
                     <div className="shrink-0">
-                      <div className="w-14 h-14 rounded-full flex bg[#e8eaed] items-center justify-center">
-                        <img src={icon1} alt="company icon" />
+                      <div className="w-14 h-14 rounded-full flex bg-[#e8eaed] items-center justify-center">
+                        <img src="/images/comp-icon1.png" alt="company icon" />
                       </div>
                     </div>
                     <div>
@@ -84,8 +76,8 @@ export default function ConstructionAboutSection() {
 
                   <div className="flex items-start gap-4">
                     <div className="shrink-0">
-                      <div className="w-14 h-14 rounded-full flex items-center justify-center">
-                        <img src={icon2} alt="company icon" />
+                      <div className="w-14 h-14 rounded-full flex bg-[#e8eaed] items-center justify-center">
+                        <img src="/images/comp-icon2.png" alt="company icon" />
                       </div>
                     </div>
                     <div>
