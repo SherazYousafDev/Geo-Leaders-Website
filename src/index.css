@@ -2,24 +2,22 @@
 
 @import "tailwindcss";
 
-
 @theme {
+  /* Font Family */
+  --font-Poppins: "Poppins", sans-serif;
 
-/* Font Family */
---font-Poppins: 'Poppins', sans-serif; 
+  /* Colors */
 
-
-/* Colors */
-
---color-main: #00245C;
---color-prim: #1C3867;
---color-sec: #FEBC34;
---color-head: #262626;
-
+  --color-main: #00245c;
+  --color-prim: #1c3867;
+  --color-sec: #febc34;
+  --color-head: #262626;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+
+  overflow-x: hidden;
 }
 
 /* container.css */

@@ -144,14 +144,14 @@ export default function Contact() {
       </div>
 
       {/* Google Map */}
-      <div className="w-full h-96 ">
+      <div className="w-full h-96">
         <iframe
           title="Office Location Map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.989691620147!2d55.0868033150186!3d24.98793548404353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f116fbc6bb2d3%3A0x2bcbb2c4adf3c15c!2sJebel%20Ali%2C%20Dubai%2C%20United%20Arab%20Emirates!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28850.004835471293!2d55.3416262!3d25.1697544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef5f1a1c7b1aab5%3A0x123456789abcdef!2s25%C2%B010'11.1%22N%2055%C2%B020'48.5%22E!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
           width="100%"
           height="100%"
           className="border-0 rounded-xl"
-          allowFullScreen=""
+          allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         />

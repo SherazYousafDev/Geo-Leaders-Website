@@ -166,8 +166,8 @@ export default function FooterSection() {
 
       {/* Contact Info Section */}
       <div className="border-t border-blue-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {/* Phone */}
             <div className="flex items-start gap-4 group cursor-pointer">
               <div className="shrink-0 w-16 h-16 bg-blue-800 rounded-full flex items-center justify-center group-hover:bg-sec transition-all duration-300">
@@ -206,10 +206,16 @@ export default function FooterSection() {
                 <MapPin className="w-7 h-7 text-white" />
               </div>
               <div>
-                <p className="text-gray-400 text-sm mb-1">Location</p>
-                <p className="text-white text-lg font-semibold">
-                  Jabil Ali – Dubai - UAE
-                </p>
+                <p className="text-gray-400 text-sm mb-1  ">Location</p>
+                <a
+                  href="https://www.google.com/maps/place/25%C2%B010'11.1%22N+55%C2%B020'48.5%22E/@25.1697544,55.3442394,17z/data=!3m1!4b1!4m4!3m3!8m2!3d25.1697544!4d55.3468143?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA2N0gBUAM%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className=" text-white text-lg font-semibold "
+                >
+                  Office No.114 Al Khoory Hill Building Ras Al khor industrial
+                  area 2 Dubai, UAE
+                </a>
               </div>
             </div>
           </div>

@@ -14,15 +14,16 @@ export default function Header() {
   const [navOpen, setNavOpen] = useState(false);
 
   return (
-    <header className="w-full">
+    <header className="w-full overflow-hidden">
       {/* 🔶 TOP STRIP */}
-      <div className="relative w-full h-10 py-2 overflow-hidden hidden sm:block">
+      <div className="relative w-full h-10 py-2 overflow-hidden hidden lg:block">
+        {/* Background colors / skew */}
         <div className="absolute inset-0 bg-sec"></div>
-        <div className="hidden md:block absolute top-0 bottom-0 left-1/2 right-0 bg-prim transform -skew-x-12 origin-left"></div>
+        <div className="hidden lg:block absolute top-0 bottom-0 left-1/2 right-0 bg-prim transform -skew-x-12 origin-left"></div>
 
-        <div className="relative z-10 container mx-auto px-4 flex flex-col gap-2 md:flex-row md:justify-between md:items-center">
+        <div className="relative z-10 container mx-auto px-4 flex flex-col gap-2 lg:flex-row lg:justify-between lg:items-center">
           {/* Contact Info */}
-          <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-8 text-black text-sm md:text-base">
+          <div className="hidden lg:flex flex-col lg:flex-row lg:items-center gap-2 lg:gap-8 text-black text-sm lg:text-base">
             <div className="flex items-center gap-2">
               <FaPhoneAlt size={16} />
               <span className="font-medium">+971 55 774 5783</span>
@@ -34,7 +35,7 @@ export default function Header() {
           </div>
 
           {/* Social Icons */}
-          <div className="flex items-center justify-center gap-4 text-white mt-1 md:mt-0">
+          <div className="hidden lg:flex items-center justify-center gap-4 text-white mt-1 lg:mt-0">
             <button className="hover:scale-110 transition-transform">
               <FaFacebookF size={18} />
             </button>
@@ -50,32 +51,27 @@ export default function Header() {
 
       {/* 🔷 MIDDLE HEADER */}
       <div className="relative border-b">
-        {/* Subtle Radial Pattern Background */}
         <div
           className="absolute inset-0"
           style={{
             backgroundColor: "#ecedf0",
             backgroundImage:
-              "radial-gradient(rgba(0, 0, 0, 0.200) 1px, transparent 0)",
+              "radial-gradient(rgba(0, 0, 0, 0.2) 1px, transparent 0)",
             backgroundSize: "30px 30px",
             backgroundPosition: "-5px -5px",
-            width: "100%",
-            height: "100%",
           }}
         ></div>
 
-        {/* Content */}
-        <div className="relative container mx-auto px-4 py-4 flex flex-col md:flex-row md:justify-between md:items-center h-24">
+        <div className="relative container mx-auto px-4 py-4 flex items-center justify-center lg:justify-between h-25">
           {/* Logo */}
-          <div className="flex justify-center md:justify-start">
+          <div className="shrink-0">
             <Link to="/" className="block">
-              <img className="w-48 md:w-60" src="/logo.png" />
+              <img className="w-48 md:w-60" src="/logo.png" alt="Logo" />
             </Link>
           </div>
 
-          {/* Contact Items */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-8 md:gap-20 mt-4 md:mt-0">
-            {/* Call Us */}
+          {/* Contact Items - hidden on tablet and below */}
+          <div className="hidden lg:flex items-center gap-8">
             {/* Call Us */}
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 bg-prim rounded-full flex items-center justify-center">
@@ -95,7 +91,7 @@ export default function Header() {
             </div>
 
             {/* Address */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2">
               <div className="w-12 h-12 bg-prim rounded-full flex items-center justify-center">
                 <MapPin className="text-white" size={24} strokeWidth={2.5} />
               </div>
@@ -104,12 +100,13 @@ export default function Header() {
                   Office Address
                 </span>
                 <a
-                  href="https://www.google.com/maps/place/Jebel+Ali,+Dubai,+United+Arab+Emirates"
+                  href="https://www.google.com/maps/place/25%C2%B010'11.1%22N+55%C2%B020'48.5%22E/@25.1697544,55.3442394,17z/data=!3m1!4b1!4m4!3m3!8m2!3d25.1697544!4d55.3468143?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA2N0gBUAM%3D"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-900 font-medium text-base sm:text-lg hover:text-prim transition-colors duration-300"
+                  className=" text-gray-900 wrap-break-word font-medium text-base sm:text-md hover:text-prim transition-colors duration-300"
                 >
-                  Jabil Ali – Dubai - UAE
+                  Office No.114 Al Khoory Hill Building Ras <br /> Al khor
+                  industrial area 2, Dubai U.A.E
                 </a>
               </div>
             </div>
@@ -120,8 +117,8 @@ export default function Header() {
       {/* 🔵 NAVIGATION BAR */}
       <nav className="bg-main text-white relative w-full">
         <div className="container flex justify-between items-center h-16 px-4">
-          {/* Desktop Menu */}
-          <ul className="hidden md:flex gap-12 font-medium text-lg">
+          {/* Desktop Menu - only on lg+ */}
+          <ul className="hidden lg:flex gap-12 font-medium text-lg">
             <li>
               <Link to="/" className="hover:text-sec">
                 Home
@@ -139,23 +136,16 @@ export default function Header() {
                 Services <IoIosArrowDown />
               </button>
 
-              <ul
-                className="absolute left-0 top-full mt-2 bg-white text-black shadow-xl rounded-lg 
-                 border border-gray-100 w-56 opacity-0 invisible group-hover:opacity-100 
-                 group-hover:visible transition-all duration-300 z-50"
-              >
+              <ul className="absolute left-0 top-full mt-2 bg-white text-black shadow-xl rounded-lg border border-gray-100 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                 <li className="px-4 py-3 hover:bg-gray-50 border-b">
                   <Link to="/services">Piling Foundation Engineering</Link>
                 </li>
-
                 <li className="px-4 py-3 hover:bg-gray-50 border-b">
                   <Link to="/services">Ground Improvement Techniques</Link>
                 </li>
-
                 <li className="px-4 py-3 hover:bg-gray-50 border-b">
                   <Link to="/services">Slope Stability Analysis</Link>
                 </li>
-
                 <li className="px-4 py-3 hover:bg-gray-50">
                   <Link to="/services">
                     Earth Retaining & Shoring Structures
@@ -164,7 +154,6 @@ export default function Header() {
               </ul>
             </li>
 
-            {/* Certificates (new) */}
             <li>
               <Link to="/certificates" className="hover:text-sec">
                 Certificates
@@ -188,15 +177,15 @@ export default function Header() {
           <div className="flex items-center gap-4">
             <Link
               to="/contact"
-              className="bg-sec text-black px-8 py-[21px] font-semibold hover:bg-white hover:text-main hidden md:block"
+              className="bg-sec text-black px-8 py-[21px] font-semibold hover:bg-white hover:text-main hidden lg:block"
             >
               GET A FREE QUOTE
             </Link>
 
-            {/* Mobile Toggle Button */}
+            {/* Hamburger Menu - show on mobile & tablet */}
             <button
               onClick={() => setNavOpen(!navOpen)}
-              className="md:hidden flex flex-col gap-1"
+              className="flex lg:hidden flex-col gap-1"
             >
               <span className="w-6 h-0.5 bg-white"></span>
               <span className="w-6 h-0.5 bg-white"></span>
@@ -205,9 +194,9 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile & Tablet Menu */}
         {navOpen && (
-          <ul className="md:hidden bg-[#0a2d57] text-center py-4 space-y-4">
+          <ul className="flex flex-col lg:hidden bg-[#0a2d57] text-center py-4 space-y-4">
             <li>
               <Link to="/" onClick={() => setNavOpen(false)}>
                 Home
@@ -228,7 +217,6 @@ export default function Header() {
                 Certificates
               </Link>
             </li>
-
             <li>
               <Link to="/machinery" onClick={() => setNavOpen(false)}>
                 Machinery
